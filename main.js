@@ -4,9 +4,10 @@ console.log(get_random_index(wordList));
 var random_word = retreive_random_word().toUpperCase();
 console.log(random_word);
 var guess_count = 1;
+let event_listener;
 
 const input_field = document.getElementById("input-field");
-input_field.addEventListener('keydown', function(event){
+input_field.addEventListener('keydown', event_listener=function(event){
     if(event.key === 'Enter'){
         event.preventDefault();
         guess();
@@ -49,8 +50,9 @@ function guess()
     
     if (guess_count > 5)
     {
-        document.getElementById("error-message").innerText = "Out of guesses"
+        document.getElementById("error-message").innerText = `You suck ass at this. The word was ${random_word}`;
         document.getElementById("error-message").className = "error-message";
+        document.getElementById("reset-button").className = "btn btn-secondary";
         return;
     }    
     //If word in word list, compare strings and send result as object to the update board function
@@ -93,6 +95,7 @@ function update_board(word_arr, result_obj, guess_count)
 {
     var updateIdTemplate = `${guess_count}-`;
     let variableIdTemplate = updateIdTemplate;
+    let num_green = 0
     for(let i = 0; i < 5; i++)
     {
         variableIdTemplate = updateIdTemplate+String(i+1);
@@ -103,6 +106,7 @@ function update_board(word_arr, result_obj, guess_count)
             case "green":
                 element.className = "green-square";
                 element.innerText = word_arr[i];
+                num_green++;
                 break;
             case "yellow":
                 element.className = "yellow-square";
@@ -119,6 +123,20 @@ function update_board(word_arr, result_obj, guess_count)
         element = document.getElementById("input-field");
         element.value = "";
     }
+    if(num_green == 5)
+    {
+        document.getElementById("error-message").innerText = "You're incredible. You saved the world :)";
+        document.getElementById("error-message").className = "error-message";
+        input_field.removeEventListener('keydown', event_listener);
+        document.getElementById("reset-button").className = "btn btn-secondary";
+
+
+    }
     return;
 
+}
+function reset()
+{
+    console.log("reset");
+    location.reload();
 }

@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="d-flex align-items-center justify-content-center">
-        <input type="text input-width: 500px justify-content-center align-items-center text-center" class="text-input" maxlength="5" text-align="center" id="input-field" onclick="clear_error_message()">
+        <input type="text input-width: 500px justify-content-center align-items-center text-center" class="text-input" maxlength="5" text-align="center" id="input-field" autocomplete="off" onclick="clear_error_message()">
         <button type="button" class="btn btn-dark" onclick="guess(document.getElementById('input-field'));">Test</button>
 
 
@@ -62,7 +62,7 @@
     </div>
     <div class="d-flex align-items-center justify-content-center">
         <p class = "hid-error-message" id="error-message">Not in word list</p>
-        <button class = "hid-reset-button">reset</button>
+        <button type="button" class = "hid-reset-button" id="reset-button" onclick="reset()">reset</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
