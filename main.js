@@ -5,6 +5,18 @@ var random_word = retreive_random_word().toUpperCase();
 console.log(random_word);
 var guess_count = 1;
 
+const input_field = document.getElementById("input-field");
+input_field.addEventListener('keydown', function(event){
+    if(event.key === 'Enter'){
+        event.preventDefault();
+        guess();
+    }
+    else
+    {
+        document.getElementById("error-message").className = "hid-error-message";
+    }
+    });
+
 function retreive_random_word()
 {
     let random_index = get_random_index(wordList);
