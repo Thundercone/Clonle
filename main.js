@@ -104,6 +104,8 @@ function update_board(word_arr, result_obj, guess_count)
                 console.log("Error in update_board switch case statement");
                 break;     
         }
+        element = document.getElementById("input-field");
+        element.value = "";
     }
     return;
 
