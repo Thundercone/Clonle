@@ -1,0 +1,106 @@
+.title
+{
+    margin: auto;
+    text-align: center;
+
+}
+.custom-container
+{
+    margin: auto;
+    width: 10%;
+}
+.blank-square
+{
+    display: grid;
+    place-items: center;
+    width:100px;
+    height:100px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: bisque;
+    text-align: center;
+    justify-content: center;
+}
+.green-square
+{
+    font-size: xx-large;
+    display: grid;
+    place-items: center;
+    width:100px;
+    height:100px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: bisque;
+    text-align: center;
+    color: white;
+    background-color: #6AAA64;
+}
+.yellow-square
+{
+    font-size: xx-large;
+    display: grid;
+    place-items: center;
+    width:100px;
+    height:100px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: bisque;
+    text-align: center;
+    background-color: #C9B458;
+}
+.grey-square
+{
+    font-size: xx-large;
+    display: grid;
+    place-items: center;
+    width:100px;
+    height:100px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: bisque;
+    text-align: center;
+    background-color: #787c7E;
+    color:white;
+}
+.hid-square
+{
+    display: grid;
+    place-items: center;
+    width:100px;
+    height:100px;
+    padding: 10px;
+    text-align: center;
+}
+.hid-reset-button
+{
+    width:100px;
+    height:100px;
+}
+.text-input
+{
+    width: 400px;
+    /* text-align: center; */
+   /*  justify-self: center;
+    justify-content: center;
+    justify-items: center; */
+}
+.hid-reset-button
+{
+   background-color: white;
+   color: white;
+   opacity: 0%; 
+   pointer-events: none;
+}
+.hid-error-message
+{
+    opacity: 0%;
+    pointer-events: none;
+}
+.error-message
+{
+    opacity: 100%;
+}
