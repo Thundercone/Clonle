@@ -1,3 +1,4 @@
+window.popWords = [
 "aback",
 "abaft",
 "abase",
@@ -3100,4 +3101,5 @@
 "yours",
 "youth",
 "zebra",
-"zones",
+"zones"
+];
