@@ -1,9 +1,10 @@
 const wordList = window.wordList;
+const popWordList = window.popWords;
 console.log(wordList.length);
 console.log(get_random_index(wordList));
 var random_word = retreive_random_word().toUpperCase();
 console.log(random_word);
-var guess_count = 1;
+var guess_count = 0;
 let event_listener;
 
 const input_field = document.getElementById("input-field");
@@ -20,12 +21,12 @@ input_field.addEventListener('keydown', event_listener=function(event){
 
 function retreive_random_word()
 {
-    let random_index = get_random_index(wordList);
-    return wordList[random_index];
+    let random_index = get_random_index(popWordList);
+    return popWordList[random_index];
 }
 function get_random_index(wordList)
 {
-    var max_index = wordList.length - 1;
+    var max_index = popWordList.length - 1;
     let random_index = Math.floor(Math.random() * (max_index +1));
     if (random_index < max_index)
     {
@@ -140,3 +141,5 @@ function reset()
     console.log("reset");
     location.reload();
 }
+//TODO
+//Fix double letter bug.
