@@ -4,7 +4,7 @@ console.log(wordList.length);
 console.log(get_random_index(wordList));
 var random_word = retreive_random_word().toUpperCase();
 console.log(random_word);
-var guess_count = 0;
+var guess_count = 1;
 let event_listener;
 
 const input_field = document.getElementById("input-field");
@@ -49,7 +49,7 @@ function guess()
             return;
         }
     
-    if (guess_count > 5)
+    if (guess_count > 6)
     {
         document.getElementById("error-message").innerText = `You suck ass at this. The word was ${random_word}`;
         document.getElementById("error-message").className = "error-message";
